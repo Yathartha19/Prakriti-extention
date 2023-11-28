@@ -8,6 +8,7 @@ body {
    width: 400px;
    height: 600px;
    background-image: url(wood.png);
+   background-size:cover;
    display:flex;
    justify-content:center;
 }
@@ -22,7 +23,7 @@ body {
    padding-top:100px;
    opacity: 0;
    width:400px;
-   height: 600px;
+   height: 500px;
    animation: 0.5s linear 0s fadein forwards;
    animation-delay: 1.25s;
 }
@@ -50,6 +51,7 @@ body {
    width: 400px;
    height: 600px;
    background-image: url(cloud.png);
+   background-size:cover;
    position: absolute;
    animation: 0.5s linear 0s fadeout forwards;
    animation-delay: 1.25s;
