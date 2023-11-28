@@ -1,0 +1,137 @@
+* {
+   margin: 0;
+   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+   "Lucida Sans", Arial, sans-serif;
+}
+ 
+body {
+   width: 400px;
+   height: 600px;
+   background: #fff;
+   display:flex;
+   justify-content:center;
+}
+
+.frame{
+   width: 400px;
+   height: 600px;
+   display:flex;
+}
+
+.data {
+   padding-top:100px;
+   opacity: 0;
+   width:400px;
+   height: 600px;
+   animation: 0.5s linear 0s fadein forwards;
+   animation-delay: 1.25s;
+}
+
+.city {
+   text-align: center;
+   padding-top: 5px;
+   font-size:2rem;
+}
+
+.temp {
+   text-align: center;
+   padding-top:35px;
+   font-size: 3.5rem;
+}
+
+.textbox {
+   position:absolute;
+   animation: 0.5s linear 0s fadein forwards;
+   animation-delay: 1.25s;
+   z-index: 2;
+}
+
+.layer {
+   width: 400px;
+   height: 600px;
+   background: #000;
+   position: absolute;
+   animation: 0.5s linear 0s fadeout forwards;
+   animation-delay: 1.25s;
+   z-index: -1;
+}
+
+.layer img {
+   width: 250px;
+   height:80px;
+   padding-top: 200px;
+   padding-left:80px;
+   animation: 0.7s linear 0s fadein forwards;
+}
+
+@keyframes fadein {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   } 
+}
+
+@keyframes fadeout {
+   from {
+      opacity:1;
+   }
+   to {
+      opacity:0;
+   }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.city-input{
+  display: flex;
+  justify-content: space-between;
+  width:190px;
+  height:50px;
+  padding-top: 30px;
+  padding-left: 30px;
+  opacity: 0;
+  animation: 0.5 linear 0s fadein forwards;
+  animation-delay: 1.25s;
+}
+
+.input-field{
+  position: relative;
+}
+
+.input {
+  width: 160%;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 20px;
+  border: 2px solid #000;
+  background: transparent;
+  color: #000;
+  outline: none;
+}
+
+.input-field label{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+input:focus{
+  border: 2px solid #000;
+}
+input:focus ~ label,
+input:valid ~ label{
+  top: 0;
+  left: 15px;
+  font-size: 15px;
+  padding: 0 2px;
+  background: #fff;
+}
+
+ 
