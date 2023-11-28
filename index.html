@@ -6,6 +6,7 @@
     <title>Test</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
+    <script src="popup.js"></script>
 </head>
 <body>
     
@@ -19,9 +20,10 @@
         <div class="textbox">
             <div class="city-input">
                 <div class="input-field">
-                    <form name="form" action="" method="GET" >
+                    <form name="form" action="" method="GET">
                         <input type="'text" required spellcheck="'True" id="city" name="city" class="input">
-                        <input type="button" name="button" value="Click" onClick="searchlocation(this.form)" class="button">
+                        <input type="button" name="button" value="🔍" id="click" class="button">
+                        <input type="button" name="button" value="Detect" id="detect" class="button">
                         <label for="city">Enter a City </label>
                     </form>
                 </div>
