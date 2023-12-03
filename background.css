@@ -1,0 +1,9 @@
+html[data-weather="cloudy"] {
+    --weather: url('cloud.png');
+}
+html[data-weather="rain"] {
+    --weather: url('balalalla.png');
+}
+
+
+

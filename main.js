@@ -1,3 +1,4 @@
+var temperature = 0;
 
 const getip = () => {
 
@@ -15,6 +16,13 @@ const getip = () => {
                     let temp = Math.round(data.main.temp - 273.5) + '˚C';
                     console.log(temp)
                     document.getElementById("temp").innerHTML = temp;
+                    temperature = Math.round(data.main.temp - 273.5);
+                    if( temperature > 20 ) {
+                        ROOT.dataset.weather = "cloudy";
+                    }
+                    else {
+                        ROOT.dataset.weather = "rain";
+                    }
                 });
         });
 }
@@ -34,9 +42,32 @@ const searchlocation = () => {
                     document.getElementById("city").innerHTML = loc;
                     console.log(loc)
                     console.log(temp)
+                    temperature = Math.round(data.main.temp - 273.5);
+                    if( temperature > 20 ) {
+                        ROOT.dataset.weather = "cloudy";
+                    }
+                    else {
+                        ROOT.dataset.weather = "rain";
+                    }
                 });
 
 }
+
+const button = document.querySelector('button');
+const ROOT = document.querySelector('html');
+
+function changebg() {
+    if( temperature > 20 ) {
+        ROOT.dataset.weather = "cloudy";
+    }
+    else {
+        ROOT.dataset.weather = "rain";
+    }
+}
+
+changebg()
+
+
 
 
 
